@@ -75,8 +75,8 @@ Lestari (2018) mengatakan dalam penerapan sistem antrean, pemilihan struktur dat
 # 💻 Desain Sistem (Flowchart)
 ```mermaid
 flowchart TD
-    A[Mulai] --> B[Tampilkan Menu]
-    B --> C[Input Pilihan]
+    A[Mulai] --> B[/Tampilkan Menu/]
+    B --> C[/Input Pilihan/]
 
     C -->|1| D[Tambah Pasien]
     C -->|2| E[Lihat Semua Pasien]
@@ -84,22 +84,22 @@ flowchart TD
     C -->|4| G[Panggil Pasien]
 
 
-    D --> K[Input Pasien]
+    D --> K[/Input Pasien/]
     K --> Kondisi1{Input Pasien Lagi? yes/no}
     Kondisi1 --> |yes| K
-    Kondisi1 --> |no| C
+    Kondisi1 --> |no| B
 
-    E --> DataPasien[Tampil Data Pasien]
-    DataPasien --> C
+    E --> DataPasien[/Tampil Data Pasien/]
+    DataPasien --> B
 
-    F --> CekAntrianTerdepan[Cek Antrian Terdepan]
-    CekAntrianTerdepan --> C
+    F --> CekAntrianTerdepan[/Menampilkan Antrian Terdepan/]
+    CekAntrianTerdepan --> B
 
-    G --> PanggilPasien[Tampilkan Pasien Terdepan]
+    G --> PanggilPasien[/Tampilkan Pasien Terdepan/]
     PanggilPasien --> Kondisi2{Panggil Pasien? yes/no}
     Kondisi2 --> |yes| PanggilPasienProsess[Memanggil Pasien Terdepan]
-    PanggilPasienProsess --> C
-    Kondisi2 --> |no| C
+    PanggilPasienProsess --> B
+    Kondisi2 --> |no| B
 
 
     C -->|5| Z[Selesai Program]
