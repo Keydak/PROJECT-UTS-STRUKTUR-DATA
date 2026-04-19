@@ -70,3 +70,37 @@ Lestari (2018) mengatakan dalam penerapan sistem antrean, pemilihan struktur dat
 - Rizaldy Gunawan, H. Yuana, & S. Kirom, 2023.
 - Mayangsari & Prastiwi, 2016; Darmawan et al., 2023. 
 - Lestari, 2018; Dewi, 2020.
+
+
+# 💻 Desain Sistem (Flowchart)
+```mermaid
+flowchart TD
+    A[Mulai] --> B[Tampilkan Menu]
+    B --> C[Input Pilihan]
+
+    C -->|1| D[Tambah Pasien]
+    C -->|2| E[Lihat Semua Pasien]
+    C -->|3| F[Cek Antrian Terdepan]
+    C -->|4| G[Panggil Pasien]
+
+
+    D --> K[Input Pasien]
+    K --> Kondisi1{Input Pasien Lagi? yes/no}
+    Kondisi1 --> |yes| K
+    Kondisi1 --> |no| C
+
+    E --> DataPasien[Tampil Data Pasien]
+    DataPasien --> C
+
+    F --> CekAntrianTerdepan[Cek Antrian Terdepan]
+    CekAntrianTerdepan --> C
+
+    G --> PanggilPasien[Tampilkan Pasien Terdepan]
+    PanggilPasien --> Kondisi2{Panggil Pasien? yes/no}
+    Kondisi2 --> |yes| PanggilPasienProsess[Memanggil Pasien Terdepan]
+    PanggilPasienProsess --> C
+    Kondisi2 --> |no| C
+
+
+    C -->|5| Z[Selesai Program]
+```
