@@ -71,6 +71,40 @@ Lestari (2018) mengatakan dalam penerapan sistem antrean, pemilihan struktur dat
 - Mayangsari & Prastiwi, 2016; Darmawan et al., 2023. 
 - Lestari, 2018; Dewi, 2020.
 
+---
+
+## 3. Konsep FIFO
+
+Algoritma *First In First Out (FIFO)* merupakan metode yang digunakan dalam sistem antrian tanpa prioritas, di mana elemen yang pertama kali masuk akan diproses terlebih dahulu. Prinsip ini bekerja secara berurutan dan bergiliran sesuai dengan urutan kedatangan, tanpa adanya perlakuan khusus terhadap elemen tertentu. FIFO banyak diterapkan dalam berbagai bidang, baik dalam kehidupan sehari-hari maupun dalam sistem komputer dan teknologi.
+
+Menurut Fitriani dan Apridiansyah (2021), algoritma FIFO sering dimanfaatkan dalam aplikasi berbasis teknologi, seperti sistem antrian pembayaran, karena mampu menjaga keteraturan proses secara adil. Setiap pengguna atau data diproses sesuai urutan masuknya, sehingga meminimalkan konflik dan meningkatkan efisiensi layanan. Hal ini menjadikan FIFO sebagai solusi yang sederhana namun efektif dalam pengelolaan antrian.
+
+Selain itu, Hidayat, Noor, dan Al Amin (2018) menjelaskan bahwa FIFO memiliki sifat berurutan dan tetap mengikuti jalur proses yang telah ditentukan sejak awal. Dengan kata lain, tidak ada elemen yang dapat melompati antrean, sehingga sistem berjalan secara konsisten dan terstruktur. Pendekatan ini sangat cocok digunakan dalam sistem pengaduan pelanggan atau layanan publik yang membutuhkan keadilan dalam penanganan.
+
+Dalam bidang persediaan barang, metode FIFO juga digunakan untuk mengatur alur keluar masuk barang. Menurut Hendarman Lubis dkk., barang yang pertama kali masuk akan menjadi barang yang pertama kali dikeluarkan atau dijual. Metode ini membantu menjaga kualitas barang, terutama untuk produk yang memiliki masa simpan, serta mempermudah pencatatan stok secara sistematis dan akurat.
+
+📚 Referensi:
+- Fitriani, F., & Apridiansyah, Y. (2021). Aplikasi Antrian Pembayaran Uang Kuliah Berbasis Android Menggunakan Algoritma FIFO di Universitas Muhammadiyah Bengkulu. JUSIBI, 3(2), 91–103.  
+- Hidayat, F., Noor, F., & Al Amin, I. H. (2018). Implementasi Metode FIFO untuk Analisa Sistem Antrian Pengaduan Pelanggan ISP. Dinamik, 23(2), 73–79.  
+- Lubis, H., Fitriyani, A., & Prayitno, M. H. Sistem Informasi Persediaan Barang Jadi Menggunakan Metode FIFO pada PT Rubberman Indonesia.
+  
+---
+
+## 4. Implementasi Menggunakan Array
+
+Menurut Hindriani, N., Narwen, & Yozza, H. (2016) Dalam implementasi menggunakan arrat pada awalnya antrian berada dalam kondisi kosong sehingga tidak ada elemen yang dapat dihapus. Jika dilakukan penghapusan pada kondisi ini, maka akan terjadi kesalahan yang disebut underflow. Sebaliknya, penambahan elemen hanya dapat dilakukan ketika antrian belum penuh. Jika antrian sudah penuh, maka penambahan elemen baru akan menyebabkan overflow, sehingga elemen tersebut harus menunggu hingga tersedia ruang dalam antrian.
+
+Menurut Cormen, T. H., et al. Implementasi array digunakan untuk merepresentasikan antrian pasien dalam sistem rumah sakit dengan memanfaatkan list di Python (self.antrian = [ ]). Data pasien disimpan secara berurutan, di mana penambahan dilakukan dengan append() (menambah di akhir) dan pemanggilan pasien menggunakan pop(0) (menghapus dari awal). Mekanisme ini mengikuti konsep FIFO (First In First Out), yaitu pasien yang datang lebih dahulu akan dilayani terlebih dahulu. Fungsi tambahan seperti lihat_antrian() digunakan untuk menampilkan isi antrian, sedangkan jumlah_antrian() untuk menghitung jumlah data.
+
+Namun, Goodrich, M. T., dan Tamassia, R. mengatakan penggunaan array memiliki keterbatasan, khususnya pada operasi pop(0) yang memiliki kompleksitas O(n) karena harus menggeser elemen lainnya. Hal ini membuatnya kurang efisien untuk jumlah data besar. Oleh karena itu, dalam praktiknya sering digunakan struktur data lain seperti collections.deque yang lebih optimal untuk operasi antrian.
+
+📚 Referensi:
+- Cormen, T. H., et al. Introduction to Algorithms. MIT Press.
+- Goodrich, M. T., & Tamassia, R. Data Structures and Algorithms in Python. Wiley.
+- Hindriani, N., Narwen, & Yozza, H. Implementasi Antrian dengan Menggunakan Array. (2016)
+
+---
+
 
 # 💻 Desain Sistem (Flowchart)
 ```mermaid
