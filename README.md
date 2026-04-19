@@ -1,6 +1,7 @@
 # 📚 Struktur Data – UTS
 ## Sistem Antrian Rumah Sakit (queue)
 
+Link PPT :
 ---
 
 ## 👤 Identitas Kelompok
@@ -56,3 +57,16 @@ Selain itu, dalam teknik pemrograman, struktur data merujuk pada tata letak data
 - Herawan, B. (2022). Buku Algoritma dan Struktur Data.  
 - “Artikel Struktur Data, Audit dan Jaringan Komputer.” (2018).  
 - Jodi, I. D. (2024). Algoritma dan Struktur Data.
+
+## 2. Konsep Queue
+
+Menurut Rizaldy Gunawan, H. Yuana, dan S. Kirom. (2023) Queue atau antrian merupakan salah satu struktur data yang bekerja dengan prinsip FIFO (First In First Out), yaitu elemen yang pertama kali masuk akan menjadi elemen pertama yang keluar. Dalam implementasinya, antrian memiliki dua operasi utama, yaitu enqueue untuk menambahkan elemen ke dalam antrian dan dequeue untuk menghapus elemen dari antrian. Struktur antrian ini dapat diimplementasikan menggunakan linear array maupun circular array tergantung pada kebutuhan sistem dan efisiensi pengelolaan memori.
+
+Menurut Mayangsari dan Prastiwi, (2016) model antrian (queueing model) merupakan pendekatan matematis yang digunakan untuk menganalisis sistem pelayanan, khususnya dalam memahami perilaku antrian. Tujuan utama dari model ini adalah meminimalkan total biaya, baik biaya langsung dalam penyediaan fasilitas layanan maupun biaya tidak langsung akibat waktu tunggu pelanggan. Selain itu, model antrian juga digunakan untuk memprediksi kinerja sistem, seperti jumlah pelanggan dalam antrian, waktu tunggu, waktu pelayanan, serta tingkat utilisasi server.
+
+Lestari (2018) mengatakan dalam penerapan sistem antrean, pemilihan struktur data yang tepat sangat penting untuk menjaga keadilan dan keteraturan layanan. Struktur data queue dengan prinsip FIFO dianggap paling ideal karena memastikan bahwa setiap elemen diproses sesuai urutan kedatangannya. Untuk meningkatkan fleksibilitas, penggunaan linked list sering dipilih karena mampu menyesuaikan ukuran antrian secara dinamis tanpa batas kapasitas awal seperti pada array. Hal ini menjadikan sistem lebih efisien dalam menangani perubahan jumlah data secara terus-menerus.
+
+📚 Referensi:
+- Rizaldy Gunawan, H. Yuana, & S. Kirom, 2023.
+- Mayangsari & Prastiwi, 2016; Darmawan et al., 2023. 
+- Lestari, 2018; Dewi, 2020.
