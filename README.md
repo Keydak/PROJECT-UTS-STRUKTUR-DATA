@@ -1,7 +1,7 @@
 # 📚 Struktur Data – UTS
 ## Sistem Antrian Rumah Sakit (queue)
 
-Link PPT :
+Link PPT : https://canva.link/p8vs8r8g4jy5yix
 ---
 
 ## 👤 Identitas Kelompok
