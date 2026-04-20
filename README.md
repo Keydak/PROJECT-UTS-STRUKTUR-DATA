@@ -19,8 +19,9 @@ Link PPT :
 # 🎯 Rumusan Masalah
 
 > 1. Bagaimana cara mengimplementasikan konsep queue (FIFO) dalam sistem antrian pasien di rumah sakit menggunakan OOP?
-**Jawaban:**
 
+
+**Jawaban:**
 
 Konsep queue (FIFO) diimplementasikan dengan menggunakan struktur data list, di mana pasien yang datang pertama akan dilayani terlebih dahulu. Dalam OOP, dibuat sebuah class (misalnya `AntrianRumahSakit`) yang memiliki atribut antrian dan method seperti `tambah_pasien()` untuk menambah data ke belakang antrian dan `panggil_pasien()` untuk mengambil data dari depan antrian menggunakan `pop(0)`.
 
@@ -103,13 +104,15 @@ Namun, Goodrich, M. T., dan Tamassia, R. mengatakan penggunaan array memiliki ke
 - Goodrich, M. T., & Tamassia, R. Data Structures and Algorithms in Python. Wiley.
 - Hindriani, N., Narwen, & Yozza, H. Implementasi Antrian dengan Menggunakan Array. (2016)
 
+
+
 ---
 
 
 # 💻 Desain Sistem (Flowchart)
 ```mermaid
 flowchart TD
-    A[Mulai] --> B[/Tampilkan Menu/]
+    A([Mulai]) --> B[/Tampilkan Menu/]
     B --> C[/Input Pilihan/]
 
     C -->|1| D[Tambah Pasien]
@@ -136,8 +139,180 @@ flowchart TD
     Kondisi2 --> |no| B
 
 
-    C -->|5| Z[Selesai Program]
+    C -->|5| Z([Selesai Program])
 ```
+
+
+## 1. Input
+
+Data yang masuk dari user:
+
+* `pilihan = input("Pilih menu: ")`
+* `nama = input("Masukkan nama pasien: ")`
+* `pilihan1 = input("Ingin menginput pasien lagi? (yes/no): ")`
+
+Intinya:
+
+* User memilih menu (1–5)
+* User memasukkan nama pasien saat tambah data
+
+---
+
+## 2. Proses
+
+Program memproses input berdasarkan menu:
+
+### Menu 1 → Tambah Pasien
+
+* Method: `tambah_pasien(nama)`
+* Proses: `self.antrian.append(nama)`
+* Bisa loop input berkali-kali (yes/no)
+
+### Menu 2 → Lihat Antrian
+
+* Method: `lihat_antrian()`
+* Proses:
+
+  * Ambil semua data dari list `self.antrian`
+  * Format jadi tabel pakai `tabulate`
+
+### Menu 3 → Cek Antrian Terdepan (peek)
+
+* Method: `cek_antrian_selanjutnya()`
+* Proses:
+
+  * Ambil elemen pertama: `self.antrian[0]`
+
+### Menu 4 → Panggil Pasien (dequeue / FIFO)
+
+* Method: `panggil_pasien()`
+* Proses:
+
+  * Ambil & hapus data pertama: `self.antrian.pop(0)`
+
+### Menu 5 → Keluar
+
+* Proses: `break` (menghentikan program)
+
+---
+
+## 3. Output
+
+Hasil yang ditampilkan ke user:
+
+* Tambah pasien →
+  `Pasien 'X' ditambahkan ke antrian`
+
+* Lihat antrian →
+  Tabel daftar pasien
+
+* Cek antrian →
+  `Pasien berikutnya: X`
+
+* Panggil pasien →
+  `Memanggil pasien: X`
+
+* Jika kosong →
+  `Antrian kosong`
+
+
+
+---
+
+
+# 💻 Implementasi Program 
+``` python
+import os
+from tabulate import tabulate
+
+
+class AntrianRumahSakit:
+    def __init__(self):
+        self.antrian = []
+
+    #enqueue
+    def jumlah_antrian(self):
+        return len(self.antrian)
+
+    #dequeue
+    def tambah_pasien(self, nama_pasien):
+        self.antrian.append(nama_pasien)
+        print(f"Pasien '{nama_pasien}' ditambahkan ke antrian.")
+        
+    #peek    
+    def cek_antrian_selanjutnya(self):
+        if not self.antrian:
+            print("Antrian kosong.")
+        else:
+            print(f"Pasien berikutnya: {self.antrian[0]}")
+
+    # FIFO
+    def panggil_pasien(self):
+        if not self.antrian:
+            print('Antrian kosong, tidak ada pasien.')
+        else:
+            pasien = self.antrian.pop(0)
+            print(f"Memanggil pasien: {pasien}")
+                         
+    #display
+    def lihat_antrian(self):
+        if not self.antrian:
+            print("Antrian kosong.")
+        else:
+            print("Daftar antrian pasien:")
+            data = [[i, pasien]
+                    for i, pasien in enumerate(self.antrian, start=1)]
+            print(tabulate(data, headers=[
+                  "No", "Nama Pasien"], tablefmt="psql"))
+
+
+antrian_rs = AntrianRumahSakit()
+
+while True:
+    os.system("cls")
+    print("\n=== Sistem Antrian Rumah Sakit ===")
+    print("1. Tambah Pasien")
+    print("2. Lihat Semua Pasien")
+    print("3. Cek Antrian Terdepan")
+    print("4. Panggil Pasien")
+    print("5. Keluar")
+
+    pilihan = input("Pilih menu: ")
+
+    if pilihan == "1":
+        nama = input("Masukkan nama pasien: ")
+        antrian_rs.tambah_pasien(nama)
+        while True:
+            pilihan1 = input("Ingin menginput pasien lagi? (yes/no) : ")
+
+            if pilihan1 == "yes":
+                nama = input("Masukkan nama pasien: ")
+                antrian_rs.tambah_pasien(nama)
+            elif pilihan1 == "no":
+
+                break
+            else:
+                print("Pilihan tidak valid.")
+    elif pilihan == "2":
+        antrian_rs.lihat_antrian()
+        input("\nTekan Enter untuk lanjut...")
+    elif pilihan == "3":
+        antrian_rs.cek_antrian_selanjutnya()
+        input("\nTekan Enter untuk lanjut...")
+    elif pilihan == "4":
+        antrian_rs.panggil_pasien()
+        input("\nTekan Enter untuk lanjut...")
+    elif pilihan == "5":
+        print("Program selesai.")
+        break
+    else:
+        print("Pilihan tidak valid.")
+        input("\nTekan Enter untuk lanjut...")
+```
+
+
+---
+
 
 # :newspaper: Kesimpulan
 
