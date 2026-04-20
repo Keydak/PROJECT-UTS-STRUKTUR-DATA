@@ -138,3 +138,11 @@ flowchart TD
 
     C -->|5| Z[Selesai Program]
 ```
+
+# :newspaper: Kesimpulan
+
+Kesimpulan dari implementasi sistem antrian pasien rumah sakit menggunakan konsep queue (FIFO) menunjukkan bahwa seluruh rumusan masalah telah berhasil diselesaikan dengan baik. Program yang dibuat mampu mengimplementasikan prinsip FIFO menggunakan struktur data list, di mana pasien yang datang terlebih dahulu akan dilayani lebih dahulu. Sistem juga telah dirancang secara terstruktur melalui penggunaan method seperti `tambah_pasien()`, `panggil_pasien()`, `lihat_antrian()`, dan `jumlah_antrian()`, sehingga proses pengelolaan data menjadi lebih efektif, terorganisir, dan mudah dipahami. Selain itu, sistem dapat menampilkan jumlah dan urutan pasien secara akurat dengan memanfaatkan `fungsi len()` dan `enumerate()`.
+
+Dari sisi kesesuaian teori, implementasi program telah berjalan sesuai dengan konsep dasar struktur data queue, yaitu proses enqueue menggunakan `append()` dan dequeue menggunakan `pop(0)`. Mekanisme ini memastikan bahwa urutan pelayanan tetap konsisten sesuai prinsip FIFO. Program juga telah mampu menangani kondisi antrian kosong (underflow), serta menunjukkan keterbatasan penggunaan array, khususnya pada operasi `pop(0)` yang memiliki kompleksitas waktu `O(n)`. Hal ini sejalan dengan teori yang menyatakan bahwa penggunaan array kurang efisien untuk antrian berskala besar.
+
+Secara keseluruhan, penggunaan struktur data queue dalam sistem ini memberikan manfaat yang signifikan, terutama dalam menjaga keadilan pelayanan dan keteraturan proses antrian. Sistem menjadi lebih sistematis, mudah dikembangkan, serta relevan untuk diterapkan pada berbagai kasus layanan seperti rumah sakit, bank, maupun sistem pelayanan publik lainnya. Dengan demikian, dapat disimpulkan bahwa implementasi queue (FIFO) dalam program ini tidak hanya berhasil secara teknis, tetapi juga efektif dalam menyelesaikan permasalahan antrian secara nyata.
