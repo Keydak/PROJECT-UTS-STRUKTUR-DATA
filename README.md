@@ -53,11 +53,12 @@ Struktur data juga dapat dipahami sebagai metode penyimpanan dan pengaturan data
 
 Selain itu, dalam teknik pemrograman, struktur data merujuk pada tata letak data yang terdiri dari kolom dan baris (record), baik yang terlihat oleh pengguna maupun yang digunakan untuk kebutuhan internal sistem (Jodi, 2024).
 
-
 📚 Referensi:
 - Herawan, B. (2022). Buku Algoritma dan Struktur Data.  
 - “Artikel Struktur Data, Audit dan Jaringan Komputer.” (2018).  
 - Jodi, I. D. (2024). Algoritma dan Struktur Data.
+
+---
 
 ## 2. Konsep Queue
 
