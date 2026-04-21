@@ -6,11 +6,11 @@ class AntrianRumahSakit:
     def __init__(self):
         self.antrian = []
 
-    
+  
     def jumlah_antrian(self):
         return len(self.antrian)
 
-    #enqueue
+     #enqueue
     def tambah_pasien(self, nama_pasien):
         self.antrian.append(nama_pasien)
         print(f"Pasien '{nama_pasien}' ditambahkan ke antrian.")
@@ -52,12 +52,14 @@ while True:
     print("3. Cek Antrian Terdepan")
     print("4. Panggil Pasien")
     print("5. Keluar")
-
+    print("=======================")
     pilihan = input("Pilih menu: ")
+    print("=======================")
 
     if pilihan == "1":
         nama = input("Masukkan nama pasien: ")
         antrian_rs.tambah_pasien(nama)
+        print("=======================")
         while True:
             pilihan1 = input("Ingin menginput pasien lagi? (yes/no) : ")
 
