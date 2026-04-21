@@ -93,7 +93,7 @@ Dalam bidang persediaan barang, metode FIFO juga digunakan untuk mengatur alur k
 
 ## 4. Implementasi Menggunakan Array
 
-Menurut Hindriani, N., Narwen, & Yozza, H. (2016) Dalam implementasi menggunakan arrat pada awalnya antrian berada dalam kondisi kosong sehingga tidak ada elemen yang dapat dihapus. Jika dilakukan penghapusan pada kondisi ini, maka akan terjadi kesalahan yang disebut underflow. Sebaliknya, penambahan elemen hanya dapat dilakukan ketika antrian belum penuh. Jika antrian sudah penuh, maka penambahan elemen baru akan menyebabkan overflow, sehingga elemen tersebut harus menunggu hingga tersedia ruang dalam antrian.
+Menurut Hindriani, N., Narwen, & Yozza, H. (2016) Dalam implementasi menggunakan array pada awalnya antrian berada dalam kondisi kosong sehingga tidak ada elemen yang dapat dihapus. Jika dilakukan penghapusan pada kondisi ini, maka akan terjadi kesalahan yang disebut underflow. Sebaliknya, penambahan elemen hanya dapat dilakukan ketika antrian belum penuh. Jika antrian sudah penuh, maka penambahan elemen baru akan menyebabkan overflow, sehingga elemen tersebut harus menunggu hingga tersedia ruang dalam antrian.
 
 Menurut Cormen, T. H., et al. Implementasi array digunakan untuk merepresentasikan antrian pasien dalam sistem rumah sakit dengan memanfaatkan list di Python (self.antrian = [ ]). Data pasien disimpan secara berurutan, di mana penambahan dilakukan dengan append() (menambah di akhir) dan pemanggilan pasien menggunakan pop(0) (menghapus dari awal). Mekanisme ini mengikuti konsep FIFO (First In First Out), yaitu pasien yang datang lebih dahulu akan dilayani terlebih dahulu. Fungsi tambahan seperti lihat_antrian() digunakan untuk menampilkan isi antrian, sedangkan jumlah_antrian() untuk menghitung jumlah data.
 
