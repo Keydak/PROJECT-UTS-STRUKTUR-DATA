@@ -8,9 +8,9 @@ Link PPT : https://canva.link/p8vs8r8g4jy5yix
 
 | NIM | Nama        | Kelas        | Akun Github   |
 |----|-------------|--------------------|----------|
-| 2501010004  | Dewa Gede Agung Dwi Angga Suputra  | A       | BebekTerbang334     |
-| 2501010018  | Dewa Gede Maha Putra  | A  |  Doremika452 |
-| 2501010052  | I Kadek Cri Bhaskara Wirawan Sutha   | A          | Keydak  |
+| 2501010004  | Dewa Gede Agung Dwi Angga Suputra  | A       | [BebekTerbang334](https://github.com/BebekTerbang334)     |
+| 2501010018  | Dewa Gede Maha Putra  | A  |  [Doremika452](https://github.com/Doremika452)  |
+| 2501010052  | I Kadek Cri Bhaskara Wirawan Sutha   | A          |  [Keydak](https://github.com/Keydak)  |
 
 
 ---
@@ -230,11 +230,11 @@ class AntrianRumahSakit:
     def __init__(self):
         self.antrian = []
 
-    #enqueue
+  
     def jumlah_antrian(self):
         return len(self.antrian)
 
-    #dequeue
+     #enqueue
     def tambah_pasien(self, nama_pasien):
         self.antrian.append(nama_pasien)
         print(f"Pasien '{nama_pasien}' ditambahkan ke antrian.")
@@ -246,7 +246,7 @@ class AntrianRumahSakit:
         else:
             print(f"Pasien berikutnya: {self.antrian[0]}")
 
-    # FIFO
+    # FIFO & #dequeue
     def panggil_pasien(self):
         if not self.antrian:
             print('Antrian kosong, tidak ada pasien.')
@@ -276,12 +276,14 @@ while True:
     print("3. Cek Antrian Terdepan")
     print("4. Panggil Pasien")
     print("5. Keluar")
-
+    print("=======================")
     pilihan = input("Pilih menu: ")
+    print("=======================")
 
     if pilihan == "1":
         nama = input("Masukkan nama pasien: ")
         antrian_rs.tambah_pasien(nama)
+        print("=======================")
         while True:
             pilihan1 = input("Ingin menginput pasien lagi? (yes/no) : ")
 
@@ -308,6 +310,7 @@ while True:
     else:
         print("Pilihan tidak valid.")
         input("\nTekan Enter untuk lanjut...")
+
 ```
 
 
