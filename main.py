@@ -6,11 +6,11 @@ class AntrianRumahSakit:
     def __init__(self):
         self.antrian = []
 
-    #enqueue
+    
     def jumlah_antrian(self):
         return len(self.antrian)
 
-    #dequeue
+    #enqueue
     def tambah_pasien(self, nama_pasien):
         self.antrian.append(nama_pasien)
         print(f"Pasien '{nama_pasien}' ditambahkan ke antrian.")
@@ -22,7 +22,7 @@ class AntrianRumahSakit:
         else:
             print(f"Pasien berikutnya: {self.antrian[0]}")
 
-    # FIFO
+    # FIFO & #dequeue
     def panggil_pasien(self):
         if not self.antrian:
             print('Antrian kosong, tidak ada pasien.')
